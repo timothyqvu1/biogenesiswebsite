@@ -115,8 +115,8 @@ form button {
 }
 
 .icon {
-  width: 5px;
-  height: 5px;
-  color: #22c55e; /* Customize the color */
-  margin-bottom: 0.5rem;
+  width: 5px !important;
+  height: 5px !important;
+  color: #22c55e !important; /* Customize the color */
+  margin-bottom: 0.5rem !important;
 }
