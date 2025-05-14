@@ -114,3 +114,9 @@ form button {
   transform: scale(1.05);
 }
 
+.icon {
+  width: 40px;
+  height: 40px;
+  color: #0077b5; /* Customize the color */
+  margin-bottom: 0.5rem;
+}
