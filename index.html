@@ -4,70 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consulting Business</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header, footer {
-      background: #333;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .service-box {
-      background: #f4f4f4;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .service-box img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 0.5rem;
-    }
-    .service-box h3 {
-      margin: 0.5rem 0;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: auto;
-    }
-    form input, form textarea {
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      padding: 0.75rem;
-      background: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    @media (max-width: 768px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your updated CSS file -->
 </head>
 <body>
   <header>
@@ -123,6 +60,18 @@
   <section id="about">
     <h2>About Us</h2>
     <p>With decades of combined experience, our team brings industry expertise and dedication to every client engagement.</p>
+    <div class="team-grid">
+      <div class="team-box">
+        <img src="https://via.placeholder.com/50" alt="Your Icon">
+        <h3>Your Name</h3>
+        <p>Brief bio about your experience and role in the business.</p>
+      </div>
+      <div class="team-box">
+        <img src="https://via.placeholder.com/50" alt="Partner Icon">
+        <h3>Partner's Name</h3>
+        <p>Brief bio about your partner's experience and role in the business.</p>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
