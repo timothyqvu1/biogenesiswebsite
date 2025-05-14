@@ -97,15 +97,14 @@ form button {
 }
 
 .linkedin-icon {
-  width: 5px;
-  height: 5px;
-  margin-top: 0.1rem;
-  fill: #0077b5;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
 
 .linkedin-link {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   transition: transform 0.2s ease;
 }
 
