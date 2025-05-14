@@ -3,555 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascend Consulting - Professional Business Consulting Services</title>
-    <meta name="description" content="Expert business consulting services to help organizations achieve sustainable growth and operational excellence.">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="description" content="Consulting services for businesses and professionals.">
+    <title>Consulting Business</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="#home">Ascend Consulting</a>
-                </div>
-
-                <nav class="nav-desktop">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="mobile-menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-
-            <nav class="nav-mobile">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Hero / Introduction -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Consulting Business</h1>
+            <p>Helping you achieve your business goals with expert guidance and personalized solutions.</p>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
-    </header>
+    </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Transform Your Business With Strategic Solutions</h1>
-                    <p>We help organizations navigate complex challenges and achieve sustainable growth through expert consulting services.</p>
-                    <div class="hero-buttons">
-                        <a href="#services" class="btn btn-primary">Our Services</a>
-                        <a href="#contact" class="btn btn-outline">Contact Us</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Business professionals in a meeting">
-                </div>
+    <!-- Services -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Business Strategy</h3>
+                <p>We help you develop a roadmap to scale and grow your business.</p>
+            </div>
+            <div class="service">
+                <h3>Market Research</h3>
+                <p>Comprehensive insights to help you make data-driven decisions.</p>
+            </div>
+            <div class="service">
+                <h3>Process Optimization</h3>
+                <p>Improve efficiency and streamline your workflows for better productivity.</p>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <p class="stat-value">250+</p>
-                    <p class="stat-label">Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <p class="stat-value">98%</p>
-                    <p class="stat-label">Client Satisfaction</p>
-                </div>
-                <div class="stat-item">
-                    <p class="stat-value">15+</p>
-                    <p class="stat-label">Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <p class="stat-value">30+</p>
-                    <p class="stat-label">Industry Experts</p>
-                </div>
+    <!-- Our Process -->
+    <section id="process" class="section">
+        <h2>Our Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <h3>Discovery</h3>
+                <p>We start by understanding your unique needs and challenges.</p>
+            </div>
+            <div class="step">
+                <h3>Strategy</h3>
+                <p>We develop a tailored plan to help you achieve your goals.</p>
+            </div>
+            <div class="step">
+                <h3>Execution</h3>
+                <p>We help you implement the strategy and track progress.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>We provide tailored consulting solutions to help your business achieve its goals.</p>
-            </div>
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-chart-bar"></i>
-                    </div>
-                    <h3>Strategic Planning</h3>
-                    <p>Develop comprehensive business strategies aligned with your organizational goals and market conditions.</p>
-                </div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3>Organizational Development</h3>
-                    <p>Enhance your organization's effectiveness through structural improvements and team development.</p>
-                </div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <h3>Market Research</h3>
-                    <p>Gain valuable insights into market trends, customer preferences, and competitive landscapes.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-code-branch"></i>
-                    </div>
-                    <h3>Process Optimization</h3>
-                    <p>Streamline your operations and improve efficiency through innovative process improvements.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                    </div>
-                    <h3>Financial Advisory</h3>
-                    <p>Optimize your financial performance with strategic planning and resource allocation.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Digital Transformation</h3>
-                    <p>Leverage technology to transform your business operations and enhance customer experience.</p>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
-            </div>
-        </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Process</h2>
-                <p>We follow a proven methodology to deliver consistent results for our clients.</p>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Discovery</h3>
-                    <p>We analyze your current situation and understand your unique challenges.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Strategy</h3>
-                    <p>We develop a customized plan to address your specific needs.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Implementation</h3>
-                    <p>We work alongside your team to execute the strategic plan.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Optimization</h3>
-                    <p>We measure results and refine strategies for continuous improvement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <p>Don't just take our word for it — hear from the organizations we've helped.</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Ascend Consulting helped us identify key growth opportunities we had overlooked. Their strategic insights transformed our business approach."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" alt="Sarah Johnson">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CEO, TechNova Inc.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The process optimization recommendations from Ascend resulted in a 32% increase in operational efficiency within the first quarter."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" alt="David Chen">
-                        </div>
-                        <div class="author-info">
-                            <h4>David Chen</h4>
-                            <p>COO, Globalex Manufacturing</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Their market research was incredibly thorough and provided actionable insights that helped us successfully launch in three new markets."</p>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" alt="Maria Rodriguez">
-                        </div>
-                        <div class="author-info">
-                            <h4>Maria Rodriguez</h4>
-                            <p>VP Marketing, Bright Retail</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Our consulting team">
-                </div>
-
-                <div class="about-text">
-                    <h2>About Ascend Consulting</h2>
-                    <p>Ascend Consulting was founded in 2008 with a mission to help organizations navigate complex business challenges and achieve sustainable growth. Our team of experienced consultants brings diverse expertise across industries and disciplines.</p>
-                    <p>We pride ourselves on our collaborative approach, working closely with clients to understand their unique needs and develop tailored solutions that deliver measurable results.</p>
-                    <p>Our commitment to excellence, integrity, and innovation has earned us the trust of hundreds of clients ranging from startups to Fortune 500 companies.</p>
-
-                    <div class="advantages-grid">
-                        <div class="advantage-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>Industry Expertise</h3>
-                                <p>Specialized knowledge across diverse sectors</p>
-                            </div>
-                        </div>
-
-                        <div class="advantage-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>Proven Results</h3>
-                                <p>Track record of delivering measurable outcomes</p>
-                            </div>
-                        </div>
-
-                        <div class="advantage-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>Client-Centered</h3>
-                                <p>Tailored approaches for your unique challenges</p>
-                            </div>
-                        </div>
-
-                        <div class="advantage-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>Global Perspective</h3>
-                                <p>Insights from international business experience</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Leadership Team</h2>
-                <p>Meet the experienced professionals who lead our consulting practice.</p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Michael Anderson">
-                    </div>
-                    <h3>Michael Anderson</h3>
-                    <p class="member-role">Founder & CEO</p>
-                    <p class="member-bio">Former strategy executive with 20+ years of experience in business transformation.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Jennifer Lee">
-                    </div>
-                    <h3>Jennifer Lee</h3>
-                    <p class="member-role">Chief Strategy Officer</p>
-                    <p class="member-bio">Expert in organizational development with experience across 5 continents.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Robert Patel">
-                    </div>
-                    <h3>Robert Patel</h3>
-                    <p class="member-role">Director of Operations</p>
-                    <p class="member-bio">Process optimization specialist with background in manufacturing and technology.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Sophia Martinez">
-                    </div>
-                    <h3>Sophia Martinez</h3>
-                    <p class="member-role">Head of Client Success</p>
-                    <p class="member-bio">Relationship management expert ensuring exceptional client outcomes.</p>
-                    <div class="member-social">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Schedule a free consultation to discuss how we can help you overcome challenges and achieve your goals.</p>
-            <a href="#contact" class="btn btn-light">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Have questions or ready to start a project? Get in touch with our team.</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
-                                <div class="error-message" id="firstNameError"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="lastName">Last name</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
-                                <div class="error-message" id="lastNameError"></div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
-                            <div class="error-message" id="emailError"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="Your company">
-                            <div class="error-message" id="companyError"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service of Interest</label>
-                            <select id="service" name="service">
-                                <option value="select">Please select</option>
-                                <option value="strategic-planning">Strategic Planning</option>
-                                <option value="organizational-development">Organizational Development</option>
-                                <option value="market-research">Market Research</option>
-                                <option value="process-optimization">Process Optimization</option>
-                                <option value="financial-advisory">Financial Advisory</option>
-                                <option value="digital-transformation">Digital Transformation</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <div class="error-message" id="serviceError"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="How can we help you?" rows="5" required></textarea>
-                            <div class="error-message" id="messageError"></div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <div class="office-info">
-                        <h3>Our Office</h3>
-
-                        <div class="map-container">
-                            <div class="map-placeholder">
-                                <i class="fa-solid fa-map"></i>
-                                <span>Map loading...</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fa-solid fa-map-marker-alt"></i>
-                                <div>
-                                    <p>
-                                        123 Business Avenue<br>
-                                        Suite 500<br>
-                                        San Francisco, CA 94107
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <i class="fa-solid fa-phone"></i>
-                                <div>
-                                    <p>(555) 123-4567</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div>
-                                    <p>info@ascendconsulting.com</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <div>
-                                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Ascend Consulting</h3>
-                    <p>Expert business consulting services to help organizations achieve sustainable growth and operational excellence.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>123 Business Avenue, Suite 500</li>
-                        <li>San Francisco, CA 94107</li>
-                        <li>(555) 123-4567</li>
-                        <li>info@ascendconsulting.com</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Ascend Consulting. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2025 My Consulting Business. All rights reserved.</p>
     </footer>
-
-    <!-- Toast Messages -->
-    <div id="toast" class="toast" hidden>
-        <div class="toast-content">
-            <div class="toast-title" id="toastTitle"></div>
-            <div class="toast-message" id="toastMessage"></div>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
 </body>
 </html>
