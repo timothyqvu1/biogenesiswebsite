@@ -1,79 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulting services for businesses and professionals.">
-    <title>Consulting Business</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulting Business</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-box {
+      background: #f4f4f4;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .service-box img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+    .service-box h3 {
+      margin: 0.5rem 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.75rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero / Introduction -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Consulting Business</h1>
-            <p>Helping you achieve your business goals with expert guidance and personalized solutions.</p>
-            <a href="#contact" class="cta-button">Let's Work Together</a>
-        </div>
-    </section>
+  <header>
+    <h1>Welcome to Our Consulting Business</h1>
+  </header>
 
-    <!-- Services -->
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service">
-                <h3>Business Strategy</h3>
-                <p>We help you develop a roadmap to scale and grow your business.</p>
-            </div>
-            <div class="service">
-                <h3>Market Research</h3>
-                <p>Comprehensive insights to help you make data-driven decisions.</p>
-            </div>
-            <div class="service">
-                <h3>Process Optimization</h3>
-                <p>Improve efficiency and streamline your workflows for better productivity.</p>
-            </div>
-        </div>
-    </section>
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>We help businesses grow with strategic consulting solutions tailored to your unique challenges and goals.</p>
+  </section>
 
-    <!-- Our Process -->
-    <section id="process" class="section">
-        <h2>Our Process</h2>
-        <div class="process-steps">
-            <div class="step">
-                <h3>Discovery</h3>
-                <p>We start by understanding your unique needs and challenges.</p>
-            </div>
-            <div class="step">
-                <h3>Strategy</h3>
-                <p>We develop a tailored plan to help you achieve your goals.</p>
-            </div>
-            <div class="step">
-                <h3>Execution</h3>
-                <p>We help you implement the strategy and track progress.</p>
-            </div>
-        </div>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 1 Icon">
+        <h3>Service 1</h3>
+        <p>Expert guidance to streamline operations and improve efficiency.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 2 Icon">
+        <h3>Service 2</h3>
+        <p>Innovative solutions for your business challenges.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 3 Icon">
+        <h3>Service 3</h3>
+        <p>Customized strategies to drive growth and revenue.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 4 Icon">
+        <h3>Service 4</h3>
+        <p>Data-driven insights for better decision making.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 5 Icon">
+        <h3>Service 5</h3>
+        <p>Change management strategies for smooth transitions.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://via.placeholder.com/50" alt="Service 6 Icon">
+        <h3>Service 6</h3>
+        <p>Comprehensive training programs for your teams.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form action="#" method="post" class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
+  <section id="process">
+    <h2>Our Process</h2>
+    <p>We begin by understanding your business, identifying key challenges, and developing strategic solutions through a collaborative process.</p>
+  </section>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>With decades of combined experience, our team brings industry expertise and dedication to every client engagement.</p>
+  </section>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-            <button type="submit" class="submit-button">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 My Consulting Business. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Consulting Business. All rights reserved.</p>
+  </footer>
 </body>
 </html>
