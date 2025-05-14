@@ -1,154 +1,72 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic layout */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Hero Section */
-.hero {
-    background: #007BFF;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+header, footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.services-grid, .team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.cta-button {
-    background-color: #fff;
-    color: #007BFF;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.service-box, .team-box {
+  background: #f4f4f4;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
-    color: white;
+.service-box img, .team-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
 }
 
-/* Section styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
+.service-box h3, .team-box h3 {
+  margin: 0.5rem 0;
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* Services */
-.service-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+form input, form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.service {
-    background: white;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: center;
+form button {
+  padding: 0.75rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.service h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-/* Process */
-.process-steps {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.step {
-    background: white;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: center;
-}
-
-.step h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-form label {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-form textarea {
-    height: 150px;
-}
-
-.submit-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 30px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
+@media (max-width: 768px) {
+  .services-grid, .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
