@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 0.75rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #000000;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #93a6b8;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        z-index: 999;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    header, footer {
+      background: #181313;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .header-section {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #049c3e;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-image img {
+  width: 200px;
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.header-text .slogan {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-box {
+      background: #f4f4f4;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+
+    }
+    .service-box img,
+    .service-box svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+    }
+    .service-box h3 {
+      margin: 0.5rem 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .team-box {
+      background: #f4f4f4;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.9rem; /* or try 0.8rem */
+    }
+    .team-box h3 {
+      margin: 0.5rem 0;
+    }
+    .team-box p {
+  font-size: 0.7rem; /* smaller description font */
+  color: #555; /* optional: softer color for the description */
+}
+    
+    .team-box img {
+  margin-bottom: 0.5rem;
+  
+
+}
+
+.team-img-large {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.team-img-small {
+  width: 20px;
+  height: 20px;
+}
+
+    .icon {
+  width: 10px;
+  height: 10px;
+  color: #0077b5; /* You can change this to any color */
+  margin-bottom: 0.5rem;
+}
+.linkedin-icon {
+  width: 75px;
+  height: 25px;
+  color: #0077b5; /* You can change this to any color */
+  margin-bottom: 0.5rem;
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-link:hover {
+  transform: scale(1.1);
+}
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+    }
+    form input, form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.75rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">BioGenesis Partners</div>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="header-section">
+  <div class="header-image">
+    <img src="https://images.fineartamerica.com/images-medium-large-5/1-plant-leaf-in-a-petri-dish-wladimir-bulgarscience-photo-library.jpg" alt="Consulting Logo">
+  </div>
+  <div class="header-text">
+    <h1>BioGenesis Partners</h1>
+    <p class="slogan">Helping Startups Grow at the Earliest Stages</p>
+  </div>
+</header>
+
+ <section id="introduction">
+    <h2>Our Mission: Improve the rates of successful startups by helping at the earliest stage</h2>
+    <p> Startups are hard. And in the beginning, you're struggling with lack of capital, talent, and time. At BioGenesis Partners, we want to help with the conviction of a cofounder. </p>
+  </section>
+
+  <section id="services">
+    <h2>How we can help you</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+     fill="currentColor" class="icon">
+  <path fill-rule="evenodd"
+        d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
+        clip-rule="evenodd" />
+</svg>
+        <h3>Science Consulting</h3>
+        <p>Science evaluation, experimental planning, target liability assessments, risk analysis and more.</p>
+      </div>
+
+      
+        <div class="service-box">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" class="size-6">
+  <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+</svg>
+
+        <h3>Competitive Intelligence</h3>
+        <p>Identify your competitive landscape, indication analysis, in-line therapy stage, etc.</p>
+      </div>
+      <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="purple" class="size-6">
+  <path d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
+</svg>
+
+        <h3>Customer Discovery</h3>
+        <p>We can help you with generating hypotheses, conducting interviews, and sourcing KOLs.</p>
+      </div>
+      <div class="service-box">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" class="size-6">
+  <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
+  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z" clip-rule="evenodd" />
+</svg>
+        <h3>Prior Art Search</h3>
+        <p>Identify potential patents that might be of interest.</p>
+      </div>
+
+      <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="teal" class="size-6">
+  <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z" clip-rule="evenodd" />
+  <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+</svg>
+        <h3>Grant Assistance, Science Content and Writing</h3>
+        <p>Grant help, ghostwriting, advertisements, figures, and any deliverables.</p>
+      </div>
+
+      <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange" class="size-6">
+  <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z" clip-rule="evenodd" />
+</svg>
+
+        <h3>Market Analysis, revenue and cost projections, etc.</h3>
+        <p>Bottom-up market analysis and revenue projections</p>
+      </div>
+    </div>
+  </section>
+
+   <section id="process">
+    <h2>Our Process</h2>
+    <p>We begin by understanding your business, identifying key challenges, and developing strategic solutions through a collaborative process.</p>
+  </section>
+
+  <section id="about">
+  <h2>About Us</h2>
+  <p>With decades of combined experience, our team brings industry expertise and dedication to every client engagement.</p>
+  <div class="team-grid">
+    <div class="team-box">
+      <img src="Images/79890_postdoc event head shots_candids_082024_07 Timothy Vu13_0007-Edit.jpg" alt="Timothy Vu" class="team-img-large">
+      <h3>Dr. Timothy Vu, PhD</h3>
+      <p>Worked with numerous startups, developing their business and commercialization plans, grant submissions, and science evaluation. Ex. Amgen, Lawrence Livermore National Lab.</p>
+      <a href="https://www.linkedin.com/in/timothy-q-vu/" target="_blank" class="team-img-large">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
+      </a>
+    </div>
+    <div class="team-box">
+      <img src="Images/TylerPhoto.jpg" alt="Partner Icon" class="team-img-large">
+      <h3>Tyler Beth, JD</h3>
+      <p>Brief bio about your partner's experience and role in the business.</p>
+      <a href="https://www.linkedin.com/in/tyler-beth-b7b029201/" target="_blank" class="linkedin-link">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BioGenesis Partners. All rights reserved.</p>
+  </footer>
+
+
+  <!-- ✅ JS at the end of the body -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
