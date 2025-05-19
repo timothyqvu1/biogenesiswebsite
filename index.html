@@ -7,8 +7,14 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
+
+    .main-container {
+  max-width: 1200px;     /* Adjust as needed for your layout */
+  margin: 0 auto;        /* Center content */
+  padding: 0 2rem;       /* Adds left/right space */
+}
 
     .navbar {
       display: flex;
@@ -84,7 +90,7 @@
       background: #181313;
       color: #fff;
       padding: 1rem 0;
-      text-align: center;
+      text-align: left;
     }
     section {
       padding: 2rem;
@@ -95,26 +101,26 @@
     .header-section {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
-  background-color: #049c3e;
+  padding: 5rem;
+  background-color: #0ba7c6;
   border-bottom: 1px solid #ccc;
 }
 
 .header-image img {
-  width: 200px;
+  width: 500px;
   height: auto;
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 
 .header-text h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
 }
 
 .header-text .slogan {
   margin-top: 0.3rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #555;
 }
 
@@ -146,8 +152,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      justify-items: center;
     }
     .team-box {
+      max-width: 400px;
+      width: 100%;
       background: #f4f4f4;
       padding: 0.5rem;
       border: 1px solid #ddd;
@@ -155,6 +164,13 @@
       text-align: center;
       font-size: 0.9rem; /* or try 0.8rem */
     }
+
+    @media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* Stacks on smaller screens */
+  }
+}
+
     .team-box h3 {
       margin: 0.5rem 0;
     }
@@ -203,35 +219,67 @@
   transform: scale(1.1);
 }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: auto;
-    }
-    form input, form textarea {
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      padding: 0.75rem;
-      background: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    @media (max-width: 768px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+ .contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  align-items: start;
+}
+
+.contact-text {
+  max-width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #005e3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #00724f;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
-<body>
 
+
+
+
+
+
+
+
+<body>
   <nav class="navbar">
     <div class="nav-logo">BioGenesis Partners</div>
     <button class="nav-toggle" id="navToggle">&#9776;</button>
@@ -243,15 +291,19 @@
     </ul>
   </nav>
 
-  <header class="header-section">
+   <header class="header-section">
   <div class="header-image">
-    <img src="https://images.fineartamerica.com/images-medium-large-5/1-plant-leaf-in-a-petri-dish-wladimir-bulgarscience-photo-library.jpg" alt="Consulting Logo">
+    <img src="Images\pexels-gustavo-fring-6285367.jpg" alt="Consulting Logo">
   </div>
   <div class="header-text">
-    <h1>BioGenesis Partners</h1>
-    <p class="slogan">Helping Startups Grow at the Earliest Stages</p>
+    <h1>Helping Science Startups Grow — with the conviction of a cofounder.</h1>
+    <p class="slogan">Providing expertise and tailored support for early-stage startups to give the best chance of success.</p>
   </div>
 </header>
+
+
+<div class="main-container">
+  
 
  <section id="introduction">
     <h2>Our Mission: Improve the rates of successful startups by helping at the earliest stage</h2>
@@ -339,7 +391,7 @@
     <div class="team-box">
       <img src="public/Images/TylerPhoto.jpg" alt="Partner Icon" class="team-img-large">
       <h3>Tyler Beth, JD</h3>
-      <p>Brief bio about your partner's experience and role in the business.</p>
+      <p>Worked with numerous startups, developing their business and commercialization plans, grant submissions, and science evaluation. Ex. Amgen, Lawrence Livermore National Lab.</p>
       <a href="https://www.linkedin.com/in/tyler-beth-b7b029201/" target="_blank" class="linkedin-link">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
       </a>
@@ -348,14 +400,29 @@
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <div class="contact-container">
+    <div class="contact-text">
+      <h2>Contact Us</h2>
+      <p>Let's collaborate. Whether you need strategic scientific insight, competitive analysis, or regulatory support, we're here to help you move forward confidently. Reach out to start the conversation.</p>
+    </div>
+    <form class="contact-form">
+      <label for="name">Name (required):</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </div>
+</section>
+  </div>
 
   <footer>
     <p>&copy; 2025 BioGenesis Partners. All rights reserved.</p>
