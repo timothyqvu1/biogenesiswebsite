@@ -20,7 +20,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #ffffff;
+      background-color: #f7f6f3;
       color: rgb(0, 0, 0);
       padding: 0.75rem 1.5rem;
       position: sticky;
@@ -28,10 +28,23 @@
       z-index: 1000;
     }
 
-    .nav-logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+    .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+    .nav-left img {
+  height: 70px;
+  width: auto;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(12, 12, 12);
+}
+
 
     .nav-toggle {
       display: none;
@@ -67,6 +80,10 @@
         display: block;
       }
 
+        .nav-left {
+    flex: 0 0 auto;
+  }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -100,28 +117,78 @@
 
     .header-section {
   display: flex;
-  align-items: center;
-  padding: 5rem;
-  background-color: #0ba7c6;
+  flex-wrap: wrap;
+  height: auto;
+  background-color: #0e503c;
   border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 500px; /* 👈 shrink max size */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* center in small screens */
 }
 
 .header-image img {
-  width: 500px;
-  height: auto;
-  margin-right: 2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
 }
 
 .header-text h1 {
   margin: 0;
-  font-size: 3rem;
-  color: #333;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .header-text .slogan {
-  margin-top: 0.3rem;
-  font-size: 1.5rem;
-  color: #555;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+  }
+
+  .header-image {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .header-image img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .header-text {
+    padding: 1.5rem;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text .slogan {
+    font-size: 1rem;
+  }
 }
 
 
@@ -148,6 +215,20 @@
       margin: 0.5rem 0;
     }
 
+    .learn-more-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #0e503c;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.learn-more-link:hover {
+  text-decoration: underline;
+  color: #204638;
+}
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -169,6 +250,7 @@
   .team-grid {
     grid-template-columns: 1fr; /* Stacks on smaller screens */
   }
+  
 }
 
     .team-box h3 {
@@ -268,6 +350,19 @@
   .contact-container {
     grid-template-columns: 1fr;
   }
+    .header-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text .slogan {
+    font-size: 1rem;
+  }
+
 }
   </style>
 </head>
@@ -281,11 +376,15 @@
 
 <body>
   <nav class="navbar">
-    <div class="nav-logo">BioGenesis Partners</div>
+    <div class="nav-left"><img src="Images/logo.png" div class="logo" alt="BioGenesis Logo">  <!-- Adjust the path to your logo image -->
+      <span class="nav-title">Biogenesis Partners</span>
+    </div>
+
+
     <button class="nav-toggle" id="navToggle">&#9776;</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
+      <!--<li><a href="#process">Process</a></li> -->
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -293,7 +392,7 @@
 
    <header class="header-section">
   <div class="header-image">
-    <img src="public/Images/pexels-gustavo-fring-6285367.jpg" alt="Consulting Logo">
+    <img src="Images/pexels-gustavo-fring-6285367.jpg" alt="Consulting Logo">
   </div>
   <div class="header-text">
     <h1>Helping Science Startups Grow — with the conviction of a cofounder.</h1>
@@ -307,22 +406,32 @@
 
  <section id="introduction">
     <h2>Our Mission: Improve the rates of successful startups by helping at the earliest stage</h2>
-    <p> Startups are hard. And in the beginning, you're struggling with lack of capital, talent, and time. At BioGenesis Partners, we want to help with the conviction of a cofounder. </p>
+    <p> Startups are hard. And in the beginning, you're struggling with lack of capital, talent, and time. We've been there, and we know how daunting the beginning seems. At BioGenesis Partners, we want to help with the conviction of a cofounder. We want to work with startups at the earliest stage and help you launch. We also work with VCs and research organizations to help evaluate new technologies and market opportunities.</p>
   </section>
 
   <section id="services">
     <h2>How we can help you</h2>
     <div class="services-grid">
+      
+    <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange" class="size-6">
+  <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z" clip-rule="evenodd" />
+</svg>
+        <h3>Market Strategy and Analysis</h3>
+        <p>Develop go-to-market strategies, bottom-up market analysis, and indication analysis based on industry and competition research.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
+      </div>
+      
       <div class="service-box">
-        
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
      fill="currentColor" class="icon">
   <path fill-rule="evenodd"
         d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
         clip-rule="evenodd" />
 </svg>
         <h3>Science Consulting</h3>
-        <p>Science evaluation, experimental planning, target liability assessments, risk analysis and more.</p>
+        <p>Advance R&D and innovation strategies that are aligned with company's go-to-market strategy, business targets, and derisking.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
       </div>
 
       
@@ -330,18 +439,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" class="size-6">
   <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
 </svg>
-
         <h3>Competitive Intelligence</h3>
-        <p>Identify your competitive landscape, indication analysis, in-line therapy stage, etc.</p>
+        <p>Deep-dive into the competitive landscape, including competitors, future trends, strategic partnerships, etc.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
       </div>
+      
       <div class="service-box">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="purple" class="size-6">
   <path d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
 </svg>
-
         <h3>Customer Discovery</h3>
         <p>We can help you with generating hypotheses, conducting interviews, and sourcing KOLs.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
       </div>
+
       <div class="service-box">
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red" class="size-6">
   <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
@@ -349,6 +460,7 @@
 </svg>
         <h3>Prior Art Search</h3>
         <p>Identify potential patents that might be of interest.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
       </div>
 
       <div class="service-box">
@@ -357,33 +469,24 @@
   <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
 </svg>
         <h3>Grant Assistance, Science Content and Writing</h3>
-        <p>Grant help, ghostwriting, advertisements, figures, and any deliverables.</p>
+        <p>Grant help, ghostwriting, advertisements, figures, and any writing deliverables.</p>
+        <a href="#contact" class="learn-more-link">Learn more</a>
       </div>
-
-      <div class="service-box">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="orange" class="size-6">
-  <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm4.5 7.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75Zm3.75-1.5a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0V12Zm2.25-3a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0V9.75A.75.75 0 0 1 13.5 9Zm3.75-1.5a.75.75 0 0 0-1.5 0v9a.75.75 0 0 0 1.5 0v-9Z" clip-rule="evenodd" />
-</svg>
-
-        <h3>Market Analysis, Revenue and Cost projections</h3>
-        <p>Bottom-up market analysis, revenue and cost projections, etc.</p>
-      </div>
-    </div>
-  </section>
-
-   <section id="process">
+</div>
+</section>
+   <!-- <section id="process">
     <h2>Our Process</h2>
-    <p>We begin by understanding your business, identifying key challenges, and developing strategic solutions through a collaborative process.</p>
-  </section>
+    <p>We start by understanding your science and technology and its advantages over the current landscape. Then, we start identifying key challenges, and developing strategic solutions through a collaborative process.</p>
+  </section>-->
 
   <section id="about">
   <h2>About Us</h2>
-  <p>With decades of combined experience, our team brings industry expertise and dedication to every client engagement.</p>
+  <p>Our expert team brings experience in biotech R&D, venture capital, legal, business development, and startup creation from our diverse backgrounds at academic institutions, biopharma companies, venture firms, and law offices.</p>
   <div class="team-grid">
     <div class="team-box">
       <img src="public/Images/79890_postdoc event head shots_candids_082024_07 Timothy Vu13_0007-Edit.jpg" alt="Timothy Vu" class="team-img-large">
       <h3>Dr. Timothy Vu, PhD</h3>
-      <p>Worked with numerous startups, developing their business and commercialization plans, grant submissions, and science evaluation. Ex. Amgen, Lawrence Livermore National Lab.</p>
+      <p>Worked with numerous startups, developing their business and commercialization plans, grant submissions, and science evaluation. Ex. Amgen, Lawrence Livermore National Lab, DigitalDx Ventures</p>
       <a href="https://www.linkedin.com/in/timothy-q-vu/" target="_blank" class="team-img-large">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
       </a>
@@ -391,7 +494,7 @@
     <div class="team-box">
       <img src="public/Images/TylerPhoto.jpg" alt="Partner Icon" class="team-img-large">
       <h3>Tyler Beth, JD</h3>
-      <p>Worked with numerous startups, developing their business and commercialization plans, grant submissions, and science evaluation. Ex. Amgen, Lawrence Livermore National Lab.</p>
+      <p>Tyler has experience in biotech business strategy, venture capital, and entrepreneurship. He provides guidance to clients with a multi-disciplinary approach that combines his scientific, business, and legal expertise. Ex. atai Life Sciences, Gordian Ventures</p>
       <a href="https://www.linkedin.com/in/tyler-beth-b7b029201/" target="_blank" class="linkedin-link">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
       </a>
@@ -405,21 +508,22 @@
       <h2>Contact Us</h2>
       <p>Let's collaborate. Whether you need strategic scientific insight, competitive analysis, or regulatory support, we're here to help you move forward confidently. Reach out to start the conversation.</p>
     </div>
-    <form class="contact-form">
-      <label for="name">Name (required):</label>
-      <input type="text" id="name" name="name" required>
+    <form id="contact-form" class="contact-form">
+  <label for="user_name">Name:</label>
+  <input type="text" name="user_name" required>
 
-      <label for="company">Company:</label>
-      <input type="text" id="company" name="company" required>
+  <label for="user_email">Email:</label>
+  <input type="email" name="user_email" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+  <label for="user_company">Company:</label>
+  <input type="text" name="user_company" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+  <label for="message">Message:</label>
+  <textarea name="message" rows="5" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
+  <button type="submit">Send Message</button>
+</form>
+
   </div>
 </section>
   </div>
@@ -438,6 +542,26 @@
       toggle.addEventListener('click', () => {
         links.classList.toggle('active');
       });
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("eg1qNztRpf7G0AKMW"); // Replace with your actual public key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_ve62rqv', 'template_aozesfr', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message. Please try again later.');
+          console.error('FAILED...', error);
+        });
     });
   </script>
 
